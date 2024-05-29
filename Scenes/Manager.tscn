@@ -47,12 +47,12 @@ offset_bottom = 193.0
 text = "READY"
 
 [node name="OptionButton" type="OptionButton" parent="."]
-offset_left = -101.0
-offset_top = -151.0
-offset_right = 103.0
-offset_bottom = -119.0
+offset_left = -115.0
+offset_top = -150.0
+offset_right = 117.0
+offset_bottom = -118.0
 item_count = 3
-popup/item_0/text = "Output Conversion"
+popup/item_0/text = "Factory output per cycle"
 popup/item_0/id = 0
 popup/item_1/text = "Factory Speed"
 popup/item_1/id = 1
