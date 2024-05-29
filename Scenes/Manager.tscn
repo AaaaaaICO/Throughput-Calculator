@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://72ebq1d8if1i"]
+
+[ext_resource type="Script" path="res://Scenes/Manager.gd" id="1_mf45p"]
+[ext_resource type="Theme" uid="uid://bkmob4p8pqkkj" path="res://Other/TextBoxTheme.tres" id="2_r4x1w"]
+
+[node name="Manager" type="Node2D"]
+script = ExtResource("1_mf45p")
+
+[node name="Device Output" type="TextEdit" parent="."]
+offset_left = -387.0
+offset_top = -118.0
+offset_right = -175.0
+offset_bottom = -2.0
+theme = ExtResource("2_r4x1w")
+placeholder_text = "Items output per factory
+(cylce)"
+
+[node name="Device Speed" type="TextEdit" parent="."]
+offset_left = -386.0
+offset_top = 3.0
+offset_right = -177.0
+offset_bottom = 116.0
+theme = ExtResource("2_r4x1w")
+placeholder_text = "1Item per (x)Seconds"
+
+[node name="OutputWanted" type="TextEdit" parent="."]
+offset_left = 140.0
+offset_top = -90.0
+offset_right = 376.0
+offset_bottom = 89.0
+theme = ExtResource("2_r4x1w")
+placeholder_text = "Number Of Items per second"
+
+[node name="Devices Needed" type="TextEdit" parent="."]
+offset_left = -83.0
+offset_top = -69.0
+offset_right = 96.0
+offset_bottom = 71.0
+theme = ExtResource("2_r4x1w")
+placeholder_text = "Number of factorys"
+
+[node name="Button" type="Button" parent="."]
+offset_left = -122.0
+offset_top = 140.0
+offset_right = 124.0
+offset_bottom = 193.0
+text = "READY"
+
+[node name="OptionButton" type="OptionButton" parent="."]
+offset_left = -101.0
+offset_top = -151.0
+offset_right = 103.0
+offset_bottom = -119.0
+item_count = 3
+popup/item_0/text = "Output Conversion"
+popup/item_0/id = 0
+popup/item_1/text = "Factory Speed"
+popup/item_1/id = 1
+popup/item_2/text = "Factorys Needed"
+popup/item_2/id = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="item_selected" from="OptionButton" to="." method="_on_option_button_item_selected"]
