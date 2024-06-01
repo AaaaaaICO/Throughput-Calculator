@@ -1,10 +1,20 @@
-[useful for games like Factorio]
+## Newest fetures
 
-Can calculate number machines needed for a specific throughput, their speed, number of item a machine creates each cycle or the overall throughput of a factory. 
+>Background and font size settings that save on close.
+>
+>and updated the ui to look better and be resizeable.
 
-Now with input cost per second to calculate belt requirements or cost
 
+
+### it can calculate:
+```
+machines needed for a specific throughput
+overall throughput
+machine speed
+machine output
+machine demand
+```
 ---
-Example of it running here
+#### Example
 
 ![alt text](https://github.com/AaaaaaICO/Throughput-Calculator/blob/main/Other/Example.PNG "View Running")
