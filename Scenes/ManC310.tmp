@@ -1,0 +1,109 @@
+[gd_scene load_steps=3 format=3 uid="uid://72ebq1d8if1i"]
+
+[ext_resource type="Script" path="res://Scenes/Manager.gd" id="1_mf45p"]
+[ext_resource type="Theme" uid="uid://bkmob4p8pqkkj" path="res://Other/TextBoxTheme.tres" id="2_r4x1w"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_mf45p")
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.007
+anchor_top = 0.177
+anchor_right = 0.992
+anchor_bottom = 0.822
+offset_left = 0.4
+offset_top = 0.199997
+offset_right = 0.399963
+offset_bottom = 0.199982
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="VBoxContainerLeft" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Items In" type="TextEdit" parent="HBoxContainer/VBoxContainerLeft"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme = ExtResource("2_r4x1w")
+placeholder_text = "Raw number of item in"
+
+[node name="Device Output" type="TextEdit" parent="HBoxContainer/VBoxContainerLeft"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme = ExtResource("2_r4x1w")
+placeholder_text = "Items output per factory
+(1 cylce)"
+
+[node name="Device Speed" type="TextEdit" parent="HBoxContainer/VBoxContainerLeft"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme = ExtResource("2_r4x1w")
+placeholder_text = "(x) finishes per second"
+
+[node name="VBoxContainerMid" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="HBoxContainer/VBoxContainerMid"]
+layout_mode = 2
+item_count = 4
+popup/item_0/text = "Factory output per cycle"
+popup/item_0/id = 0
+popup/item_1/text = "Factory speed"
+popup/item_1/id = 1
+popup/item_2/text = "Factorys needed"
+popup/item_2/id = 2
+popup/item_3/text = "Items per second"
+popup/item_3/id = 3
+
+[node name="Devices Needed" type="TextEdit" parent="HBoxContainer/VBoxContainerMid"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme = ExtResource("2_r4x1w")
+placeholder_text = "Number of factorys"
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainerMid"]
+layout_mode = 2
+theme = ExtResource("2_r4x1w")
+text = "READY"
+
+[node name="CheckBox" type="CheckBox" parent="HBoxContainer/VBoxContainerMid"]
+layout_mode = 2
+theme = ExtResource("2_r4x1w")
+text = "mini mode"
+
+[node name="VBoxContainerRight" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="ItemsInNeeded" type="Label" parent="HBoxContainer/VBoxContainerRight"]
+layout_mode = 2
+size_flags_vertical = 1
+theme = ExtResource("2_r4x1w")
+text = "Items in per/second - "
+
+[node name="OutputWanted" type="TextEdit" parent="HBoxContainer/VBoxContainerRight"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme = ExtResource("2_r4x1w")
+placeholder_text = "Number of items per second"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainerMid/CheckBox" to="." method="_on_check_box_pressed"]

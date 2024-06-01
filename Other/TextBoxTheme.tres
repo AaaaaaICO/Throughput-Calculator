@@ -4,4 +4,5 @@
 bg_color = Color(0, 0, 0, 1)
 
 [resource]
+default_font_size = 15
 TextEdit/styles/read_only = SubResource("StyleBoxFlat_sid4r")
