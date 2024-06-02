@@ -21,7 +21,7 @@ var ColorPickerSettings = {
 func _ready():
 	Load()
 
-func _on_button_pressed():
+func _on_btn_ready_pressed():
 	Calculate(node_Output.get_text(), node_Speed.get_text(), node_OutputWanted.get_text(), node_DevicesNeeded.get_text())
 	
 	

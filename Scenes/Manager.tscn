@@ -56,6 +56,20 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "15"
 
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.24
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Tag" type="Label" parent="CenterContainer"]
+layout_mode = 2
+text = "https://github.com/AaaaaaICO"
+
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -106,7 +120,7 @@ popup/item_1/text = "Factory speed"
 popup/item_1/id = 1
 popup/item_2/text = "Factorys needed"
 popup/item_2/id = 2
-popup/item_3/text = "Items per second"
+popup/item_3/text = "Throughput"
 popup/item_3/id = 3
 
 [node name="Devices Needed" type="TextEdit" parent="HBoxContainer/VBoxContainerMid"]
@@ -149,4 +163,6 @@ placeholder_text = "Number of items per second"
 [connection signal="color_changed" from="AcceptDialog/vbox Main/ColorPicker" to="." method="_on_color_picker_color_changed"]
 [connection signal="preset_added" from="AcceptDialog/vbox Main/ColorPicker" to="." method="_on_color_picker_preset_added"]
 [connection signal="preset_removed" from="AcceptDialog/vbox Main/ColorPicker" to="." method="_on_color_picker_preset_removed"]
+[connection signal="item_selected" from="HBoxContainer/VBoxContainerMid/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainerMid/Btn_Ready" to="." method="_on_btn_ready_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainerMid/Cb_MiniMode" to="." method="_on_check_button_pressed"]
