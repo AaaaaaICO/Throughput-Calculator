@@ -1,4 +1,4 @@
-## Newest fetures
+## Newest features
 
 >Background and font size settings that save on close.
 >
